@@ -22,5 +22,5 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-postgres
 
 ### Account
 
-1. Admin - obito.test.1+1@gmail.com - pass: 123456
-2. Staff - obito.test@gmail.com - pass: 123456
+1. Admin - admin@gmail.com - pass: 123456
+2. Staff - staff@gmail.com - pass: 123456
