@@ -1,0 +1,60 @@
+img#logo {
+  width: 50px;
+}
+
+img#logouser {
+  width: 20px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a.navbar-brand {
+  font-size: 24px;
+  margin-left: 8.25px;
+  font-family: var(--font-Salsa);
+}
+
+.nav-link {
+  padding: 0;
+}
+
+.nav-item > .nav-link {
+  padding: 5px 15px;
+  position: relative;
+  color: rgba(0, 0, 0, 0.97) !important;
+  font-family: var(--font-Roboto);
+  text-align: center;
+  font-size: 20px;
+}
+
+.nav-item > .nav-link:hover {
+  color:#00bcd4 !important;
+  transition: 0.4s;
+}
+a.nav-link-item {
+  color: rgba(0, 0, 0, 0.97) !important;
+}
+a.nav-link-item:hover {
+  text-decoration: none;
+}
+.item-log-out{
+  height: 32px;
+}
+.item-log-out > a{
+  font-size: 16px !important;
+}
+.div-outside-input{
+  height: 100%;
+}
+.div-dropdown > .dropdown > .btn-secondary{
+  background-color: #00d4ca7d !important;
+  border-color: white !important;
+}
+.dropdown-item:focus{
+  color: black !important;
+}
+.dropdown-item:active {
+  background-color: white !important;
+}

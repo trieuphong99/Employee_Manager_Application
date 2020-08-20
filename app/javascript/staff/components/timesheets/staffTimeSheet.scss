@@ -1,0 +1,26 @@
+/* thay doi mau cua hight light trong thu vien react date */
+.SDP{
+/* ban đầu là màu hồng nhạt(#ffe8bc) */
+.CalendarDay__highlighted_calendar{
+    background: #00a699 !important;
+    border: 1px double #00a699 !important;
+    color: #fff !important;
+  }
+.CalendarDay__selected{
+    border: 1px solid #e4e7e7 !important;
+    color: #484848 !important;
+    background: #fff !important;
+  }
+  /* khi có cả 2 class này thì chạy css ở dưới */
+.CalendarDay__highlighted_calendar.CalendarDay__selected{ 
+    background: #00a699 !important;
+    border: 1px double #00a699 !important;
+    color: #fff !important;
+  }
+.CalendarDay__default.CalendarDay__blocked_out_of_range{
+    background: #fff !important;
+    border: 1px solid #e4e7e7 !important;
+    color: #cacccd !important;
+}
+}
+  /* thay doi mau cua hight light trong thu vien react date */

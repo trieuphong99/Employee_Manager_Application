@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: "namasdfa"
+  address: "khdakfhlkdjfsajfhak"
+  short_name: "sdafsadfsa"
+
+two:
+  name: "dsafsadf"
+  address: "dsafasdfasd"
+  short_name: "dsfasdfsad"

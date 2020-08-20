@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: "Nguyen Thanh Nam"
+  phone_number: "37823686423"
+  address: "msajkdfkjbaskfdbka"
+  sex: false
+  date_of_birth: 2020-01-14
+  account: one
+
+# two:
+#   name: MyString
+#   phone_number: MyString
+#   address: MyString
+#   sex: false
+#   date_of_birth: 2020-01-14
+

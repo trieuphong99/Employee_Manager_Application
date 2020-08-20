@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-01-30
+  for_date: MyString
+  start_at: 2020-01-30 14:02:01
+  end_at: 2020-01-30 14:02:01
+  is_allowed: false
+  account: one
+
+two:
+  date: 2020-01-30
+  for_date: MyString
+  start_at: 2020-01-30 14:02:01
+  end_at: 2020-01-30 14:02:01
+  is_allowed: false
+  account: two

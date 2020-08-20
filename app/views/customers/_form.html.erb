@@ -1,0 +1,54 @@
+<%= form_with(model: customer, local: true) do |form| %>
+  <div class="form-group">
+    <%= form.label :name %>
+    <% valid_class = customer.errors.messages[:name].any? ? 'is-invalid' : '' %>
+    <%= form.text_field :name, class: "form-control #{valid_class}" %>
+    <% if customer.errors.messages.key?(:name) %>
+      <div class="invalid-feedback">
+        <% customer.errors.messages[:name].each do |message| %>
+          <span><%= "Name #{message}"%></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :short_name %>
+    <%= form.text_field :short_name, class: "form-control #{customer.errors.messages[:short_name].any? ? 'is-invalid' : ''}" %>
+    <% if customer.errors.messages.key?(:short_name) %>
+      <div class="invalid-feedback">
+        <% customer.errors.messages[:short_name].each do |message| %>
+          <span><%= "Short name #{message}"%></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address %>
+    <%= form.text_field :address, class: "form-control #{customer.errors.messages[:address].any? ? 'is-invalid' : ''}" %>
+    <% if customer.errors.messages.key?(:address) %>
+      <div class="invalid-feedback">
+        <% customer.errors.messages[:address].each do |message| %>
+          <span><%= "Short name #{message}"%></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+    <div class="form-group">
+    <%= form.label :logo %>
+    <%= form.file_field :logo, class: "form-control", accept: "image/png, image/jpg, image/gif" %>
+    <% if customer.errors.messages.key?(:logo) %>
+      <div class="invalid-feedback">
+        <% customer.errors.messages[:logo].each do |message| %>
+          <span><%= "Short name #{message}"%></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>

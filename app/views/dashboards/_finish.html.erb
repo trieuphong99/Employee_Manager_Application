@@ -1,0 +1,21 @@
+<h2 class="text-center">Checkout</h2>
+<h4 class="text-center"><%= Date.today %></h4>
+<p class="text-success">
+  The past of ice is water and the future of ice is also. So let’s live life like an ice, no worries for past or future!
+</p>
+<%= form_for @today_timesheet, method: :patch, html: {class: "form-horizontal"} do |f| %>
+  <p>
+    <strong>Started at</strong>: <%= display_hour @today_timesheet.start_at %>
+  </p>
+  <div class="form-group">
+    <%= f.select :provider_id, current_account.provider_options,
+      {include_blank: "Please select workspace"}, class: "form-control report-tool" %>
+    <%= f.hidden_field :is_finish, value: true %>
+  </div>
+  <div class="form-group">
+    <%= f.select :report_room, room_options,
+      {include_blank: "Please select room"}, class: "form-control report-room" %>
+  </div>
+  <%= f.text_area :report_content, class: "form-control report-content", row: 5, placeholder: "Input daily report" %>
+  <%= f.submit "Checkout", class: "btn btn-success submit-report", style: "width: 100%" %>
+<% end %>

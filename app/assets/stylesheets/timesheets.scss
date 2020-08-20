@@ -1,0 +1,51 @@
+// Place all the styles related to the Timesheets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.today {
+  background-color: orange;
+}
+
+.report-content {
+  height: 200px !important;
+  margin-bottom: 10px;
+}
+
+.submit-report {
+  width: 100%;
+}
+
+.btn-tool {
+  width: 90px;
+  margin-bottom: 5px;
+}
+
+.timesheet-row {
+  cursor: pointer;
+}
+
+.external-table {
+  border-top: 0px !important;
+}
+
+.provider-avatar {
+  width: 150px;
+  height: 113px;
+}
+
+.provider-icon {
+  width: 200px;
+  height: 46px;
+}
+
+.provider-icon.chatwork {
+  background-color: currentColor;
+}
+
+.connect-provider {
+  margin-top: 7px;
+  img {
+    width: 40px;
+    margin-left: 5px;
+  }
+}

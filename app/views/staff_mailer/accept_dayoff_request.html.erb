@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      From Admin: <%= @admin.profile.name %>
+    </p>
+    <p>
+      Request Date: <%= @dayoff_request.request_date %>
+    </p>
+    <p>
+      Absence From: <%= @dayoff_request.from_date %>
+    </p>
+    <p>
+      To: <%= @dayoff_request.to_date %>
+    </p>  
+    <% if @dayoff_request.confirmed?%>
+    <p>
+      Your dayoff have been accepted 
+    </p>
+    <% elsif @dayoff_request.rejected?%>
+    <p>
+      Your dayoff have not been accepted 
+    </p>
+    <% end%>
+  </body>
+</html>

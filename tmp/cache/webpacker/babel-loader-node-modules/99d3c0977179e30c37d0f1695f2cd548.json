@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar ToUint8 = require('./ToUint8'); // https://www.ecma-international.org/ecma-262/6.0/#sec-toint8\n\n\nmodule.exports = function ToInt8(argument) {\n  var int8bit = ToUint8(argument);\n  return int8bit >= 0x80 ? int8bit - 0x100 : int8bit;\n};","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,70 @@
+<div class="row profile">
+  <div class="col-md-3">
+    <%= render "sidebar" %>
+  </div>
+  <div class="col-md-9">
+    <div class="profile-content">
+      <h2>Connect to chat application</h2>
+      <br/>
+      <hr>
+      <div class="chatwork">
+        <div>
+          <%= image_tag "chatwork.png", width: "50px" %>
+          <a href="/auth/chatwork">
+            <button class="btn btn-success">Connect</button>
+          </a>
+        </div>
+        <br/>
+        <div>
+          <% current_account.chatwork_providers.each do |provider| %>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <div class="card-avatar">
+                  <img src="<%= provider.info["image"] %>" class="avatar rounded-circle pull-left">
+                  <div class="info pull-left">
+                    <strong class="card-title"><%= provider.info["name"] %></strong><br/>
+                    <span class="card-title"><%= provider.info["email"] %></span>
+                  </div>
+                </div>
+                <br/>
+                <p class="card-text">Rooms: <%= provider.rooms.length %></p>
+                <a href="/auth/chatwork">
+                  <button class="btn btn-primary">Refresh</button>
+                </a>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+      <div class="slack">
+        <div>
+          <%= image_tag "slack.svg", width: "50px" %>
+          <a href="/auth/slack" class="btn btn-success">Connect</a>
+        </div>
+        <br/>
+        <div>
+          <% current_account.slack_providers.each do |provider| %>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <div class="card-avatar">
+                  <img src="<%= provider.info["image"] %>" class="avatar rounded-circle pull-left">
+                  <div class="info pull-left">
+                    <strong class="card-title"><%= provider.info["name"] %></strong><br/>
+                    <span class="card-title"><%= provider.info["team"] %></span>
+                  </div>
+                </div>
+                <br/>
+                <p class="card-text">Nickname: <%= provider.info["nickname"] %></p>
+                <p class="card-text">Rooms: <%= provider.rooms.length %></p>
+                <a href="/auth/chatwork">
+                  <button class="btn btn-primary">Refresh</button>
+                </a>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

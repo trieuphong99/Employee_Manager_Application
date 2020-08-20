@@ -1,0 +1,75 @@
+{
+  "name": "kol_platform",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "roots": [
+      "app/javascript/admin/test"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "app/javascript"
+    ],
+    "moduleNameMapper": {
+      "\\.(gif|ttf|eot|svg)$": "app/javascript/admin/test/__mocks__/fileMock.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "@babel/compat-data": "7.9.0",
+    "@babel/preset-react": "^7.8.3",
+    "@material-ui/core": "^4.9.5",
+    "@rails/webpacker": "4.2.2",
+    "antd": "^4.2.4",
+    "apexcharts": "^3.19.0",
+    "axios": "^0.19.2",
+    "axios-mock-adapter": "^1.18.1",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "bootstrap": "^4.4.1",
+    "classnames": "^2.2.6",
+    "formik": "^2.1.4",
+    "history": "^4.10.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "push.js": "^1.0.12",
+    "react": "^16.12.0",
+    "react-apexcharts": "^1.3.7",
+    "react-clock": "^2.4.0",
+    "react-datepicker": "^2.15.0",
+    "react-dates": "^21.8.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.9.0",
+    "react-live-clock": "^4.0.3",
+    "react-on-rails": "^11.3.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-select": "^3.1.0",
+    "react-toastify": "^5.5.0",
+    "reactstrap": "^8.4.1",
+    "reactstrap-formik": "^1.0.9",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-form": "^8.3.0",
+    "redux-thunk": "^2.3.0",
+    "yup": "^0.28.1"
+  },
+  "devDependencies": {
+    "@babel/compat-data": "7.9.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.2.4",
+    "redux-mock-store": "^1.5.4",
+    "webpack-dev-server": "^3.10.2"
+  }
+}

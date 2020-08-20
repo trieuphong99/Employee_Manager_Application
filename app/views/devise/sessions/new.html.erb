@@ -1,0 +1,31 @@
+<div class="login-form">
+  <%= image_tag "logo.png", class: "logo" %>
+  <%= render "devise/shared/error_messages", resource: resource  %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-group field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+    </div>
+
+    <div class="form-group field">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "form-control" %>
+    </div>
+
+    <div>
+      <% if devise_mapping.rememberable? %>
+        <div class="field remember-me">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <% if devise_mapping.recoverable? %>
+        <%= link_to "Forgot Password", new_password_path(resource_name) %>
+      <% end %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: "btn btn-success login-btn" %>
+    </div>
+  <% end %>
+
+</div>

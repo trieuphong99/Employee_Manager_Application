@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-01-14
+  reason: "sadfgjhasgdfkg"
+  status: "ajksdkahd"
+  is_allowed: false
+  is_paid: false
+
+
+two:
+  date: 2020-01-14
+  reason: "dskjfgkjsabd"
+  status: "kdsagfjhsagdj"
+  is_allowed: false
+  is_paid: false
+

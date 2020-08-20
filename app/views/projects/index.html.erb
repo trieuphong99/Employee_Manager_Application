@@ -1,0 +1,39 @@
+<h1>Projects</h1>
+<p>
+  <%= link_to "New Project", new_project_path, class: "btn btn-default" %>
+</p>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Customer</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @projects.each do |project| %>
+        <tr>
+          <td><img class="logo" style="width: 100px" src="<%= url_for project.customer.logo %>" alt="Card image cap"></td>
+          <td><%= project.name %></td>
+          <td><%= project.customer.name %></td>
+          <td><%= project.start_date %></td>
+          <td><%= project.end_date %></td>
+          <td>
+            <%= link_to edit_project_path(project) do %>
+              <i class="fa fa-pencil"></i>
+            <% end %>
+            <%= link_to project_path(project), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @projects %>
+</div>
+

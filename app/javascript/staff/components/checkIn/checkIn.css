@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Salsa&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-Roboto: 'Roboto', sans-serif;
+  --font-Salsa: 'Salsa', cursive;
+}
+.check-in{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.total-content-check-in{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 264px;
+  background: #FFFFFF;
+  font-family: var(--font-Roboto);
+}
+.title-check-in{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 35px;
+  color: #222;
+  margin-bottom: 35px
+}
+.date-check-in{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 80px;
+  color: #444;
+}
+.text-check-in{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  font-family: var(--font-Roboto);
+}
+.text-check-in p{
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  font-size: 16px;
+}
+.div-btn-check-in{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+.btn-checkin{
+  display: flex !important;
+  width: 70%;
+  height: 50px;
+  margin: 10px auto !important;
+  justify-content: center;
+  border-radius: 0 !important;
+  font-size: 18px !important;
+  background-color:  #219653 !important;
+  color: #fff !important;
+  font-family: var(--font-Roboto);
+}
+
+.btn-checkin:hover{
+  background-color: #11d463 !important;
+}
+.link-btn:hover{
+  text-decoration: none !important;
+}
+.react-clock{
+  margin: 10px 0 10px 0;
+}

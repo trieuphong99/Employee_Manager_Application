@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar ToNumber = require('./ToNumber'); // http://www.ecma-international.org/ecma-262/5.1/#sec-9.5\n\n\nmodule.exports = function ToInt32(x) {\n  return ToNumber(x) >> 0;\n};","map":null,"metadata":{},"sourceType":"module"}

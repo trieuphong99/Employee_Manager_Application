@@ -1,0 +1,16 @@
+I"(function() {
+  App.admin = App.cable.subscriptions.create("AdminChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      return alert(data['notification']);
+    },
+    notification: function(register_name) {
+      return this.perform('notification', {
+        register_name: register_name
+      });
+    }
+  });
+
+}).call(this);
+:ET

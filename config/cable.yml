@@ -1,0 +1,15 @@
+redis: &redis
+  adapter: redis
+  url: <%= ENV['REDIS_DEVELOPMENT_URL'] || "redis://localhost:6379/1" %>
+development: *redis
+test: 
+  adapter: redis
+  url: redis://redis:6379
+
+production:
+  adapter: redis
+  url: <%= ENV["redis_url"] %>
+
+staging:
+  adapter: redis
+  url: <%= ENV["redis_url"] %>

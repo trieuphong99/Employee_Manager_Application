@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Salsa&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-Roboto: 'Roboto', sans-serif;
+}
+.general{
+  padding: 15px;
+  font-family: var(--font-Roboto);
+}
+.title-general{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 18px;
+}
+.private-information{
+  display: flex;
+  flex-direction: column;
+  height: 136px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  margin: 10px 0 0 10px;
+  padding: 8px 0 15px 16px;
+}
+.staff-information{
+  display: flex;
+  flex-direction: column;
+  height: 137px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  margin: 15px 0 0 10px;
+  padding: 8px 0 15px 16px;
+}
+.content-private-information,.content-staff-information{
+  display: flex;
+  margin-top: 8px;
+  flex: 1;
+}
+.content-left-private-information{
+  display: flex;
+  justify-content: space-between;
+}
+.content-left-staff-information{
+  display: flex;
+  justify-content: space-between;
+  width: 14%;
+}
+.content-right-private-information{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 141px;
+}
+.content-right-staff-information{
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  margin-left: 205px;
+}
+.content-information {
+  margin-left: 1em;
+}
+/* .content-left-private-information-child-left,.content-left-private-information-child-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+} */
+.content-left-private-information-child-left > p{
+  margin: 0;
+}
+.content-left-private-information-child-right > p{
+  margin: 0;
+}
+/* .content-right-private-information-child-left,.content-right-private-information-child-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+} */
+.content-right-private-information-child-left > p{
+  margin: 0;
+}
+.content-right-private-information-child-right > p{
+  margin: 0;
+}
+.content-left-staff-information-child-left > p{
+  margin: 0;
+}
+.content-left-staff-information-child-right > p{
+  margin: 0;
+}
+.content-right-staff-information-child-left > p{
+  margin: 0;
+}
+.content-right-staff-information-child-right > p{
+  margin: 0;
+}
+.content-left-staff-information-child-left,.content-left-staff-information-child-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+.content-right-staff-information-child-left,.content-right-staff-information-child-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-item-ganeral {
+  color: black;
+  font-weight: 600;
+}
+.title-information {
+  font-size: 19px;
+}

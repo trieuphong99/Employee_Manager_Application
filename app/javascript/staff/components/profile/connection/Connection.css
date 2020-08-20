@@ -1,0 +1,28 @@
+.connection{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 0 20px;
+}
+.title-connection{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 18px;
+}
+.chat-work{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  margin: 15px 0 0 10px;
+}
+.slack{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 11.1%;
+  margin: 15px 0 0 10px;
+}
+.status-connect{
+  color: #004EE4;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Hi <%= @timesheet_request.account.profile.name %>
+    </p>
+    <p>
+      Register Edit Timesheet:
+    </p>
+    <p>
+      Date <%= @timesheet_request.date %>
+    </p>
+    <p>
+      Start_at <%= @timesheet_request.start_at %> End_at <%= @timesheet_request.end_at %>
+    </p>
+    <p>
+      Reason In Late <%= @timesheet_request.reason_in %>, Reason Leave Early <%= @timesheet_request.reason_out %>, Reason Edit <%= @timesheet_request.reason %>
+    </p>
+    <% if @timesheet_request.confirmed? %>
+    <p>
+      Your edit timesheet request have been accepted 
+    </p>
+    <% elsif @overtime.rejected?%>
+    <p>
+      Your edit timesheet request have not been accepted
+    </p>
+    <% end %>
+  </body>
+</html>

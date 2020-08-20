@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar mod = require('../helpers/mod');\n\nvar Day = require('./Day'); // https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.6\n\n\nmodule.exports = function WeekDay(t) {\n  return mod(Day(t) + 4, 7);\n};","map":null,"metadata":{},"sourceType":"module"}

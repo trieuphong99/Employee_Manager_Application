@@ -1,0 +1,83 @@
+<%= form_with(model: invoice, local: true) do |form| %>
+  <h3>Project: <%= form.label @project.name %></h3>
+  <div class="field">
+    <%= form.hidden_field :project_id %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :invoice_date %>
+    <%= form.text_field :invoice_date, class: "form-control datepicker #{invoice.errors.messages[:invoice_date].any? ? 'is-invalid' : ''}" %>
+    <% if invoice.errors.messages.key?(:invoice_date) %>
+      <div class="invalid-feedback">
+        <% invoice.errors.messages[:invoice_date].each do |message| %>
+          <span><%= "Invoice Date #{message}"%></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :payment_date %>
+    <%= form.text_field :payment_date, class: "form-control datepicker #{invoice.errors.messages[:payment_date].any? ? 'is-invalid' : ''}" %>
+    <% if invoice.errors.messages.key?(:payment_date) %>
+      <div class="invalid-feedback">
+        <% invoice.errors.messages[:payment_date].each do |message| %>
+          <span><%= "Payment Date #{message}"%></span>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.fields_for :invoice_items do |ff| %>
+      <div class="form-row">
+        <div class="col-md-3 mb-3">
+          <%= ff.label :name %>
+          <%= ff.text_field :name, class: "form-control #{ff.object.errors.messages[:name].any? ? 'is-invalid' : ''}" %>
+          <% if ff.object.errors.messages.key?(:name) %>
+            <div class="invalid-feedback">
+              <% ff.object.errors.messages[:name].each do |message| %>
+                <span><%= "Name #{message}"%></span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3 mb-3">
+          <%= ff.label :quantity %>
+          <%= ff.number_field :quantity, class: "form-control #{ff.object.errors.messages[:quantity].any? ? 'is-invalid' : ''}", step: :any %>
+          <% if ff.object.errors.messages.key?(:quantity) %>
+            <div class="invalid-feedback">
+              <% ff.object.errors.messages[:quantity].each do |message| %>
+                <span><%= "Quantity #{message}"%></span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3 mb-3">
+          <%= ff.label :price_unit %>
+          <%= ff.number_field :price_unit, class: "form-control #{ff.object.errors.messages[:price_unit].any? ? 'is-invalid' : ''}" %>
+          <% if ff.object.errors.messages.key?(:price_unit) %>
+            <div class="invalid-feedback">
+              <% ff.object.errors.messages[:price_unit].each do |message| %>
+                <span><%= "Price Unit #{message}"%></span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+        <div class="col-md-3 mb-3">
+          <%= ff.label :currency %>
+          <%= ff.select :currency, InvoiceItem.currencies.keys, {}, { class: "form-control #{ff.object.errors.messages[:currency].any? ? 'is-invalid' : ''}" } %>
+          <% if ff.object.errors.messages.key?(:currency) %>
+            <div class="invalid-feedback">
+              <% ff.object.errors.messages[:currency].each do |message| %>
+                <span><%= "Currency #{message}"%></span>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="actions">
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>

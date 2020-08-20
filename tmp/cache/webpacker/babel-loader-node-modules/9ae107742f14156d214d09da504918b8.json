@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar mod = require('../helpers/mod');\n\nvar msPerSecond = require('../helpers/timeConstants').msPerSecond; // https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.10\n\n\nmodule.exports = function msFromTime(t) {\n  return mod(t, msPerSecond);\n};","map":null,"metadata":{},"sourceType":"module"}

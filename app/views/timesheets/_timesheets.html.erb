@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <head>
+    <tr>
+      <th>Date</th>
+      <th>Started at</th>
+      <th>Finished at</th>
+      <th>Working hours</th>
+      <th>Report</th>
+    </tr>
+  </head>
+  <body class="body-timesheet-list">
+    <% timesheets.each do |timesheet| %>
+      <tr class="timesheet-row <%= 'today' if timesheet.date == Date.today %>"
+        data-timesheet-id="<%= timesheet.id %>">
+        <th><%= timesheet.date %></th>
+        <th><%= display_hour timesheet.start_at %></th>
+        <th><%= display_hour timesheet.end_at %></th>
+        <th class="<%= timesheet.working_hour && timesheet.working_hour >= 8 ? 'green' : 'red' %>"><%= timesheet.working_hour %></th>
+        <th><%= timesheet.report_content.present? ? "Yes" : "No" %></th>
+      </tr>
+    <% end %>
+  </body>
+</table>

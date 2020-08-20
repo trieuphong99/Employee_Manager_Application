@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-sm-4 col-md-offset-4">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h2 class="text-center">Working Date</h2>
+        <h3 class="text-center"><%= @timesheet.date.strftime("%Y-%m-%d") %></h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8 col-md-offset-2">
+    <table class="table table-striped">
+      <head>
+        <tr>
+          <th>Started at</th>
+          <th>Finished at</th>
+          <th>Working hours</th>
+          <th>Report</th>
+        </tr>
+      </head>
+      <body>
+        <tr class="today">
+          <th><%= display_hour @timesheet.start_at %></th>
+          <th><%= display_hour @timesheet.end_at %></th>
+          <th class="<%= @timesheet.working_hour && @timesheet.working_hour >= 8 ? 'green' : 'red' %>"><%= @timesheet.working_hour %></th>
+          <th><%= @timesheet.report_content.present? ? "Yes" : "No" %></th>
+        </tr>
+      </body>
+    </table>
+    <% if @timesheet.report_content.present? %>
+      <h2 class="text-center">Today Report</h2>
+      <%= render "today_report", timesheet: @timesheet %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar Day = require('./Day');\n\nvar DayFromYear = require('./DayFromYear');\n\nvar YearFromTime = require('./YearFromTime'); // https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.4\n\n\nmodule.exports = function DayWithinYear(t) {\n  return Day(t) - DayFromYear(YearFromTime(t));\n};","map":null,"metadata":{},"sourceType":"module"}

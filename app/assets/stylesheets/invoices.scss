@@ -1,0 +1,115 @@
+// Place all the styles related to the Invoices controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.greenyellow {
+  background: greenyellow;
+}
+
+.bisque {
+  background: bisque;
+}
+
+.lightgray {
+  background: lightgray;
+}
+
+.pink {
+  background: #efdddd;
+}
+
+.height80 {
+  height: 80px !important;
+}
+
+.export_expired {
+  background: pink;
+}
+
+.invoice_exported {
+  background: lightgreen;
+}
+
+.deposit_expired {
+  background: lightcoral;
+}
+
+.deposited {
+  background: limegreen;
+}
+
+.projects-table {
+  width: 220px;
+  overflow-x: hidden;
+  display: inline-block;
+
+  th {
+    height: 35px !important;
+  }
+  td {
+    width: 220px;
+  }
+}
+
+.invoices-table {
+  width: calc(100% - 220px);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  display: inline-block;
+
+  td {
+    min-width: 100px;
+    max-width: 100px;
+  }
+}
+
+table {
+  tr.title {
+    height: 20px;
+
+    th {
+      padding: 5px !important;
+    }
+  }
+
+  tr.customer {
+    height: 40px;
+  }
+
+  tr.invoice {
+    height: 40px;
+  }
+
+  tr {
+    border: 1px solid #e9ecef;
+    th {
+      padding: 10px;
+      border-left: 1px solid #e9ecef;
+      text-align: center;
+    }
+    td {
+      padding: 10px 0px;
+      border-left: 1px solid #e9ecef;
+      text-align: center;
+      position: relative;
+      .amount {
+        position: absolute;
+        top: 18px;
+        left: 24px;
+      }
+      .toolbox {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #f8f9fa;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+      a {
+        color: lightgrey;
+      }
+    }
+  }
+}

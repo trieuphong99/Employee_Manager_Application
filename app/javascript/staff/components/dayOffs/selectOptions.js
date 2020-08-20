@@ -1,0 +1,1 @@
+export const status = ["Long Day-off", "Full Day-off", "Half Day-off"]

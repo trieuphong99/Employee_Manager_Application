@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      By User Name: <%= @user.profile.name %>, Code: <%= @user.code %>
+    </p>
+    <p>
+        Date: <%= @timesheet_request.date %>
+    </p>
+    <p>
+      Start at: <%= @timesheet_request.start_at %>
+    </p>
+    <p>
+      End at: <%= @timesheet_request.end_at %>
+    </p>
+    <p>
+      Reason In late: <%= @timesheet_request.reason_in %>
+    </p>
+    <p>
+      Reason Leave Early: <%= @timesheet_request.reason_out %>
+    </p>
+    <p>
+      Reason Edit: <%= @timesheet_request.reason %>
+    </p>
+    <p><%= link_to "Check Request", admin_timesheet_request_url(@timesheet_request) %></p>
+  </body>
+</html>

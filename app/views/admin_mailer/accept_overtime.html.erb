@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Hi <%= @overtime.account.profile.name %>
+    </p>
+    <p>
+      Register overtime: date <%= @overtime.date %> start_at <%= @overtime.start_at %> and end_at <%= @overtime.end_at %>
+    </p>
+    <% if @overtime.confirmed? %>
+    <p>
+      Your overtime have been accepted 
+    </p>
+    <% elsif @overtime.rejected?%>
+    <p>
+      Your overtime have not been accepted
+    </p>
+    <% end %>
+  </body>
+</html>

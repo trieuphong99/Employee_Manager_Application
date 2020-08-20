@@ -1,0 +1,17 @@
+<div class="forgot-form">
+  <%= image_tag "logo.png", class: "logo" %>
+  <i class="title">Forgot your password?</i>
+
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="form-group field">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Send", class: "btn btn-success login-btn"%>
+    </div>
+  <% end %>
+</div>
+

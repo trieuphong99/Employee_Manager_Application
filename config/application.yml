@@ -1,0 +1,31 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+# production:
+#   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
+#   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
+CHATWORK_CLIENT_ID: "kRoXMWrG3Klxq"
+CHATWORK_CLIENT_SECRET: "a)#*uA,Bd_zTN|57O.qppio2i=_#8JwN"
+SLACK_CLIENT_ID: "600931592322.629862708020"
+SLACK_CLIENT_SECRET: "bebcd20bcbfbc2ff8cf2e9110d46da7b"
+
+gmail_username: 'bunbuimp@gmail.com'
+gmail_password: 'qmrsheyadeeysygu'
+
+mailer_host: 'bunbuimp.herokuapp.com'
+action_cable_url: 'wss://bunbuimp.herokuapp.com/cable'
+action_cable_allowed_request_origins: 'https://bunbuimp.herokuapp.com'
+redis_url: 'redis://bunbuimp.mxcif1.0001.apse1.cache.amazonaws.com:6379'
+
+RDS_STAGING_HOST: 'imp-staging.crtd3gjlscxi.ap-southeast-1.rds.amazonaws.com'
+RDS_PRODUCTION_HOST: 'imp-production.crtd3gjlscxi.ap-southeast-1.rds.amazonaws.com'
+
+production-db-username: 'postgres'
+production-db-password: '12345678'
+
+DEVISE_JWT_SECRET_KEY: 'cae12e7b67768cb28e89dae97951dea2b63679534509652eed452269ab5d250924d618b68b752a37743b8cfe4b209f554b869e851d66c7833ee5ea9d516f905c'

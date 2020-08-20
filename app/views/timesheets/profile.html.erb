@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="col-sm-4">
+            <h3>Connect</h3>
+          </div>
+          <div class="col-sm-8 connect-provider">
+            <a href="/auth/chatwork"><%= image_tag "chatwork.png", class: "provider-connect" %></a>
+            <a href="/auth/slack"><%= image_tag "slack.svg", class: "provider-connect slack" %></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% @providers.each do |provider| %>
+    <div class="col-sm-6">
+      <div class="panel panel-default profile-detail-page">
+        <div class="panel-body">
+          <h2 class="text-center">
+            <%= image_tag "#{provider.type_id}-icon.png",
+              class: "provider-icon #{provider.type_id}" %>
+          </h2>
+          <table class="table external-table">
+            <tbody>
+              <tr>
+                <th>Email</th>
+                <td><%= provider.info[:email] %></td>
+              </tr>
+              <tr>
+                <th>User name</th>
+                <td><%= provider.info[:name] %></td>
+              </tr>
+              <tr>
+                <th>Workspace</th>
+                <td>
+                  <% if provider.chatwork? %>
+                    <%= provider.info[:team] %>
+                  <% else %>
+                    <%= provider.info[:team] %>
+                  <% end  %>
+                </td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td>
+                  <%= provider.info[:description] %>
+                </td>
+              </tr>
+              <tr class="provider-room-detail">
+                <th>Rooms</th>
+                <td>
+                  <% provider.rooms.each do |room| %>
+                    <%= room[:name] %><br>
+                  <% end %>
+                </td>
+              </tr>
+              <tr>
+                <th>Avatar</th>
+                <td>
+                  <%= image_tag provider.info[:image], class: "provider-avatar" %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

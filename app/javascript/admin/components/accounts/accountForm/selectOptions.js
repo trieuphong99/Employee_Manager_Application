@@ -1,0 +1,5 @@
+export const contract_type = ["Full time", "Part time"]
+export const position = ["Developer", "Tester"]
+export const status = ["Active", "Deactive"]
+export const sex = ["Male", "Female"]
+export const roles = ["Admin", "Staff"]

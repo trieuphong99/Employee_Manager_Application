@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      By User Name: <%= @user.profile.name %>, Code: <%= @user.code %>
+    </p>
+    <p>
+        Date: <%= @overtime.date %>
+    </p>
+    <p>
+      Start at: <%= @overtime.start_at %>
+    </p>
+    <p>
+        End at: <%= @overtime.end_at %>
+    </p>
+    <p><%= link_to "Check Request", admin_user_overtime_url(@overtime) %></p>
+  </body>
+</html>

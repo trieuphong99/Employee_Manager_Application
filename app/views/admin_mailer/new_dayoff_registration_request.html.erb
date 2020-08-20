@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Staff: <%= @request_user.profile.name %>
+    </p>
+    <p>
+      Request Date: <%= @dayoff_reg_attributes.request_date %>
+    </p>
+    <p>
+      Absence From: <%= @dayoff_reg_attributes.from_date%>
+    </p>
+    <p>
+      To: <%= @dayoff_reg_attributes.to_date %>
+    </p>
+    <p>
+      Status: <%= @dayoff_reg_attributes.status%>
+    </p>
+    <p>
+      Content:    <%= @dayoff_reg_attributes.reason %> 
+    </p>
+    <p><%= link_to 'Check Request', admin_user_dayoff_url(@dayoff_reg_attributes) %></p>
+  </body>
+</html>

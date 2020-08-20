@@ -1,0 +1,16 @@
+<table class="table external-table">
+  <tbody>
+    <tr>
+      <th>Report type</th>
+      <td><%= timesheet.provider_type&.capitalize %></td>
+    </tr>
+    <tr>
+      <th>Report room</th>
+      <td><%= timesheet.report_room %></td>
+    </tr>
+    <tr>
+      <th>Report content</th>
+      <td><%= simple_format timesheet.report_content %></td>
+    </tr>
+  </tbody>
+</table>

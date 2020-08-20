@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar GetIntrinsic = require('../GetIntrinsic');\n\nvar $floor = GetIntrinsic('%Math.floor%');\n\nvar msPerDay = require('../helpers/timeConstants').msPerDay; // https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.2\n\n\nmodule.exports = function Day(t) {\n  return $floor(t / msPerDay);\n};","map":null,"metadata":{},"sourceType":"module"}

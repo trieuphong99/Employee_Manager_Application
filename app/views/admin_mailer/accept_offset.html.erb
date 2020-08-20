@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      Hi User: <%= @compensation.account.profile.name %>
+      Register Compensation: odd date <%= @compensation.date %> to off date <%= @compensation.for_date %>
+    </p>
+    <% if @compensation.doing?%>
+    <p>
+      Your compensation have been accepted 
+    </p>
+    <% elsif @compensation.rejected?%>
+    <p>
+      Your compensation have not been accepted 
+    </p>
+    <% end%>
+  </body>
+</html>

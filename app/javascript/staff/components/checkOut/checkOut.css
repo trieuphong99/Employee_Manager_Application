@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Salsa&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-Roboto: 'Roboto', sans-serif;
+}
+.check-out{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+.total-content-check-out{
+  display: flex;
+  flex-direction: column;
+  width: 434px;
+  height: 264px;
+  background: #FFFFFF;
+  font-family: var(--font-Roboto);
+}
+.title-check-out{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 35px;
+  color: #222;
+  margin-bottom: 35px
+}
+.date-check-out{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 80px;
+  color: #444;
+}
+.sc-bdVaJa {
+  margin: 15px 0 15px 0;
+}
+.div-btn-check-out{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+}
+.btn-checkout{
+  display: flex !important;
+  width: 70%;
+  height: 50px;
+  margin: 10px auto !important;
+  justify-content: center;
+  border-radius: 0 !important;
+  font-size: 18px !important;
+  background-color:  #219653 !important;
+  color: #fff !important;
+  font-family: var(--font-Roboto);
+}
+.btn-checkout:hover{
+  background-color: #11d463 !important;
+}
+/* css reactstrap */
+button.dropdown-toggle.btn.btn-secondary {
+  min-width: 12rem;
+}
+.dropdown-toggle::after{
+  display: none !important;
+}
+/* css reactstrap */
+.drop-down-select{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.select-hour-minute{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.select-hour-minute > .form-group{
+  margin: 0;
+}
+.select-hour{
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.select-hour > label{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.select-hour > select{
+  width: 70px;
+}
+.select-minute{
+  display: flex;
+  flex: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.select-minute > label{
+  display: flex;
+  justify-content: center;
+  margin: 0 10px 0 0;
+}
+.select-minute > input{
+  width: 70px;
+}
+/* ẩn mũi tên ở select và cho nội dung ra giữa */
+.select-hour > select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  padding-left: 24px;
+}
+/* ẩn mũi tên ở select */
+.SDP >label{
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.modal-body > .form-group > .col-form-label{
+  display: flex;
+  align-items: center;
+  padding-right: 0 !important;
+}
+.div-select-time{
+  display: flex;
+  justify-content: space-between;
+  width: 409px;
+}
+#time-picker-1,#time-picker-2{
+  width: 120px !important;
+}
+/* hide and show div  */
+.div-Leave-Early{
+  display: none;
+}
+.ShowDivLeaveEarly{
+  display: block;
+}
+.div-Leave-Early-Half-Day{
+  display: none;
+}
+.ShowDivLeaveEarlyHalfDay{
+  display: block;
+}
+/* hide and show div  */
+.react-clock{
+  margin: 10px 0 10px 0;
+}
+textarea.form-control.input-password {
+  margin-left: 15px;
+  width: 100%;
+}
+
+/*compensation form*/
+.compensation-form{
+  border: 1px solid #e6e6e6;
+  padding: 10px;
+  border-radius: 3px;
+}
+.compensation-title{
+  font-size: 18px; 
+}
+.optional{
+  font-size: 14px;
+  font-weight: lighter;
+  font-style: italic;
+}
+.compensation-body{
+  padding: 0 10px 0 10px;
+}
+.remind-compensation{
+  color: red;
+  font-size: 14px;
+  font-style: italic;
+  margin: 10px 0 10px 0;
+}
+.text-remind{
+  padding-left: 20px;
+  text-align: justify;
+  margin-bottom: 0px !important;
+}

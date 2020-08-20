@@ -1,0 +1,16 @@
+I"™(function() {
+  App.staff = App.cable.subscriptions.create("StaffChannel", {
+    connected: function() {},
+    disconnected: function() {},
+    received: function(data) {
+      return alert(data['notification']);
+    },
+    register_notification: function(register_name, id) {
+      return this.perform('register_notification', {
+        register_name: register_name
+      }, id);
+    }
+  });
+
+}).call(this);
+:ET

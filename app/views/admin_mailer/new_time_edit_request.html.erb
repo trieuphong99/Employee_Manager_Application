@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      From: <%= @request_user.profile.name %>
+    </p>
+    <p>
+      Date: <%= @time_edit_attributes.date%>
+    </p>
+    <p>
+      Start Time: <%= @time_edit_attributes.start_at %>
+    </p>
+    <p>
+      End Time:   <%= @time_edit_attributes.end_at %>  
+    </p>
+    <p>
+      Content:    <%= @time_edit_attributes.reason %> 
+    </p>
+    <p><%= link_to 'Check Request', admin_user_timesheet_url(@time_edit_attributes) %></p>
+  </body>
+</html>

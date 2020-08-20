@@ -1,0 +1,21 @@
+<div class="forgot-form">
+  <%= image_tag "logo.png", class: "logo" %>
+  <i class="title">Change password</i>
+
+  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name, confirmation_token: @confirmation_token), html: { method: :put }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <%= f.hidden_field :reset_password_token %>
+
+    <div class="form-group field">
+      <%= f.password_field :password, autofocus: true, autocomplete: "new-password", placeholder: "New password", class: "form-control" %>
+    </div>
+
+    <div class="form-group field">
+      <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Comfirm password", class: "form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Accept", class: "btn btn-success login-btn" %>
+    </div>
+  <% end %>
+</div>

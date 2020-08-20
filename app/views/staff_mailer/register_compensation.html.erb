@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>
+      By User Name: <%= @user.profile.name %>, Code: <%= @user.code %>
+    </p>
+    <p>
+      Odd Date: <%= @compensation.date %>
+    </p>
+    <p>
+      For Date: <%= @compensation.for_date %>
+    </p>
+    <p><%= link_to "Check Request", admin_user_compensation_url(@compensation) %></p>
+  </body>
+</html>

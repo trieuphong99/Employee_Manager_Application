@@ -1,0 +1,8 @@
+.DateRangePickerInput__withBorder {
+  border-radius: 2px;
+  border: 2px solid #dbdbdb;
+}
+.group-btn{
+  display: flex;
+  justify-content: space-evenly;
+}

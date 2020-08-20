@@ -1,0 +1,10 @@
+<%= form_for :salary, url: salaries_path, html: {class: "form-horizontal"} do |f| %>
+  <h2 class="text-center">Import excel</h2>
+  <div class="col-sm-6">
+    <div class="form-group">
+      <label>File</label>
+      <%= f.file_field :file, class: "form-control" %>
+    </div>
+    <%= f.submit "Upload", class: "btn btn-warning" %>
+  </div>
+<% end %>

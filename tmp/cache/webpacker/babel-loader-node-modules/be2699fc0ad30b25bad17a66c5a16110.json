@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar ToUint16 = require('./ToUint16'); // https://www.ecma-international.org/ecma-262/6.0/#sec-toint16\n\n\nmodule.exports = function ToInt16(argument) {\n  var int16bit = ToUint16(argument);\n  return int16bit >= 0x8000 ? int16bit - 0x10000 : int16bit;\n};","map":null,"metadata":{},"sourceType":"module"}

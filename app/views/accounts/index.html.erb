@@ -1,0 +1,18 @@
+<h1>Accounts</h1>
+
+<table class="table table-striped">
+  <head>
+    <tr>
+      <th>ID</th>
+      <th>EMAIL</th>
+    </tr>
+  </head>
+  <body>
+    <% @accounts.each do |account| %>
+      <tr>
+        <th><%= account.id %></th>
+        <td><%= link_to account.email, account_path(account) %></td>
+      </tr>
+    <% end %>
+  </body>
+</table>

@@ -1,0 +1,1 @@
+{"ast":null,"code":"'use strict';\n\nvar mod = require('../helpers/mod');\n\nvar msPerDay = require('../helpers/timeConstants').msPerDay; // https://ecma-international.org/ecma-262/5.1/#sec-15.9.1.2\n\n\nmodule.exports = function TimeWithinDay(t) {\n  return mod(t, msPerDay);\n};","map":null,"metadata":{},"sourceType":"module"}

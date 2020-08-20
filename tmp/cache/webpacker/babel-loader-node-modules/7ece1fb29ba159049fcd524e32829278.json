@@ -1,0 +1,1 @@
+{"ast":null,"code":"console.log(\"Staff page\");","map":{"version":3,"sources":["/home/phong/rails/imp/app/javascript/packs/staff_application.js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,YAAZ","sourcesContent":["console.log(\"Staff page\")\n"]},"metadata":{},"sourceType":"module"}

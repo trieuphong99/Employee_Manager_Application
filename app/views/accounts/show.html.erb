@@ -1,0 +1,10 @@
+<h1 class="text-center"><%= current_account.email %></h1><br/><br/>
+
+<div>
+  <input class="monthpicker-2 form-control" value="<%= params[:month] || @date.strftime("%m-%Y") %>" style="width: 100px;"></input>
+</div><br/>
+<%= render "timesheets/timesheets", timesheets: @timesheets %>
+<% if @today_timesheet&.report_content.present? %>
+  <h2 class="text-center">Today Report</h2>
+  <%= render "timesheets/today_report", timesheet: @today_timesheet %>
+<% end %>

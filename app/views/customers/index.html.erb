@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<h1>Customers</h1>
+<p>
+  <%= link_to "New Customer", new_customer_path, class: "btn btn-default" %>
+</p>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><img class="logo" style="width: 100px" src="<%= url_for customer.logo %>" alt="Card image cap"></td>
+          <td><%= customer.name %></td>
+          <td><%= customer.address %></td>
+          <td>
+            <%= link_to edit_customer_path(customer) do %>
+              <i class="fa fa-pencil"></i>
+            <% end %>
+            <%= link_to customer_path(customer), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fa fa-trash"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= paginate @customers %>
+</div>

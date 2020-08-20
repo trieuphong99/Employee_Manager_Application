@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Salsa&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-Roboto: 'Roboto', sans-serif;
+}
+.profile{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px 0 20px;
+  font-family: var(--font-Roboto);
+}
+.profile-left{
+  width: 19%;
+  height: 345px;
+  background: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+}
+.profile-right{
+  width: 79.5%;
+  height: 345px;
+  background: #F2F2F2;
+}
+/* css cho bên trái */
+.img-name-id{
+  display: flex;
+  align-items: center;
+  margin: 17px 0 0 15px;
+}
+.name-id{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.name-id > p{
+  margin: 0;
+}
+.menu-profile-left{
+  height: 185px;
+  margin: 50px 17px 0 17px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+}
+.menu-profile-left-child{
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  cursor: pointer;
+  height: 40px;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+}
+.menu-profile-left-child:hover {
+  background-color: #00bcd4;
+  transition: 0.4s;
+}
+.img{
+  width: 50px;
+  height: 50px;
+  border-radius:50%;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+}

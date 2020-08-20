@@ -1,0 +1,40 @@
+<table class="table table-striped">
+  <head>
+    <tr>
+      <th>Mã nhân viên</th>
+      <th>Tên</th>
+      <th>Tổng lương</th>
+      <th>Ngày công</th>
+      <th>Tổng lương thực tế</th>
+      <th>Bảo hiểm</th>
+      <th>Thuế TNCN</th>
+      <th>Thực lĩnh</th>
+      <th></th>
+    </tr>
+  </head>
+  <body class="body-timesheet-list">
+    <% @staffs.each do |staff| %>
+      <tr>
+        <td><%= staff["id"] %></td>
+        <td><%= staff["name"] %></td>
+        <td><%= number_to_currency(staff["base_total"], precision: 0, unit: "đ") %></td>
+        <td><%= staff["days"] %></td>
+        <td><%= number_to_currency(staff["total"], precision: 0, unit: "đ") %></td>
+        <td><%= number_to_currency(staff["nv_sub_total_bh"], precision: 0, unit: "đ") %></td>
+        <td><%= number_to_currency(staff["tax"], precision: 0, unit: "đ") %></td>
+        <td><%= number_to_currency(staff["real_total"], precision: 0, unit: "đ") %></td>
+        <td>
+          <p>
+            Tên: <%= staff["name"] %><br>
+            Tổng lương: <%= number_to_currency(staff["base_total"], precision: 0, unit: "đ") %><br>
+            Ngày công: <%= staff["days"] %><br>
+            Tổng lương trong tháng: <%= number_to_currency(staff["total"], precision: 0, unit: "đ") %><br>
+            Bảo hiểm: <%= number_to_currency(staff["nv_sub_total_bh"], precision: 0, unit: "đ") %><br>
+            Thuế TNCN: <%= number_to_currency(staff["tax"], precision: 0, unit: "đ") %><br>
+            Thực lĩnh: <%= number_to_currency(staff["real_total"], precision: 0, unit: "đ") %>
+          </p>
+        </td>
+      </tr>
+    <% end %>
+  </body>
+</table>

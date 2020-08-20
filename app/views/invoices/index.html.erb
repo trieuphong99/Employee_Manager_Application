@@ -1,0 +1,75 @@
+<h1>Invoices</h1>
+
+<div class="invoices" style="display:flex">
+  <table class="projects-table">
+    <thead>
+      <tr class="title lightgray">
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @project_infos.each do |customer, projects| %>
+        <tr class="customer pink">
+          <th><%= customer.name if customer %></th>
+        </tr>
+        <% projects.each do |project| %>
+          <tr class="invoice">
+            <td class="height80"><%= project.name %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <table class="invoices-table">
+    <thead>
+      <tr class="title">
+        <th class="greenyellow" colspan="12"><%= Date.today.year %></th>
+        <th class="bisque" colspan="12"><%= Date.today.year + 1 %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @project_infos.each do |customer, projects| %>
+        <tr class="customer pink">
+          <% (1..12).each do |month| %>
+            <th><%= month %></th>
+          <% end %>
+          <% (1..12).each do |month| %>
+            <th><%= month %></th>
+          <% end %>
+        </tr>
+        <% projects.each do |project| %>
+          <tr class="invoice">
+            <% display_months.each do |month| %>
+              <% invoice = @invoice_infos.try(:[], project.id).try(:[], month) %>
+              <td class="height80 <%= display_invoice_style(invoice) %>">
+                <% if invoice  %>
+                  <span class="amount">
+                    <%= display_currency(invoice.amount, invoice.currency) %>
+                  </span>
+                  <div class="toolbox">
+                    <%= link_to edit_invoice_path(invoice) do %>
+                      <i class="fa fa-pencil"></i>
+                    <% end %>
+                    <%= link_to invoice_path(invoice), method: :delete, data: { confirm: "Are you sure?" } do %>
+                      <i class="fa fa-trash"></i>
+                    <% end %>
+                  </div>
+                <% else %>
+                  <div class="toolbox">
+                    <%= link_to new_invoice_path(project_id: project.id, month: month) do %>
+                      <i class="fa fa-plus-square"></i>
+                    <% end %>
+                  </div>
+                <% end %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+

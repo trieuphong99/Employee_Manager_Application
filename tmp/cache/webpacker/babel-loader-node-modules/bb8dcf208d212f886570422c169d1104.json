@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var FETCH_ACCOUNT = 'FETCH_ACCOUNT';","map":{"version":3,"sources":["/home/phong/rails/imp/app/javascript/admin/const/account.js"],"names":["FETCH_ACCOUNT"],"mappings":"AAAA,OAAO,IAAMA,aAAa,GAAG,eAAtB","sourcesContent":["export const FETCH_ACCOUNT = 'FETCH_ACCOUNT';\n"]},"metadata":{},"sourceType":"module"}

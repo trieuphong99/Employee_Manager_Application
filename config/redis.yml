@@ -1,0 +1,11 @@
+development:
+  url: redis://localhost:6379
+
+test:
+  url: <%= ENV["redis_test_url"] || "redis://localhost:6379" %>
+
+production:
+  url: <%= ENV["redis_url"] %>
+
+staging:
+  url: <%= ENV["redis_url"] %>
