@@ -17,9 +17,9 @@ account = Account.create!(
   confirmed_at: DateTime.now
 )
 Account.first.create_profile!(
-  name: "Nguyen Thanh Nam",
-  phone_number: "0368897065",
-  address: "Dong Ngac",
+  name: "Trieu Hai Phong",
+  phone_number: "0388124635",
+  address: "Lang Son",
   sex: "male",
   date_of_birth: Date.today
 )
@@ -35,7 +35,7 @@ account = Account.create!(
 Account.second.create_profile!(
   name: "Trieu Hai Phong",
   phone_number: "0961126705",
-  address: "Lao Cai",
+  address: "Lang Son",
   sex: "male",
   date_of_birth: Date.today
 )
